@@ -1,28 +1,25 @@
 from app import app
+from flask import render_template
 
 @app.route('/')
 def home():
-    return "<h1>Home</h1>"
+    return render_template('home.html')
 
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
-@app.route('/contact page')
-def contact_page():
-    return '''
-    <h1> contact page </h1>
-    
-    '''
+
+@app.route('/login')
+def contact():
+    return render_template('login.html')
+
+@app.route('/register')
+def contact():
+    return render_template('regoster.html')
+
 
 @app.route('/blog')
-def blog():
-    return '''
-    <h1> Blog </h1>
-    
-    '''
-
-@app.route('/shopping')
-def shopping():
-    return '''
-    <h1> Shopping </h1>
-    
-    '''
+def contact():
+    return render_template('blog.html')
